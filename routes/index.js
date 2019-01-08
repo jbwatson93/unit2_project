@@ -1,11 +1,17 @@
 const express = require('express')
 const router = express.Router()
-const linkController = require('../controllers/newslinks')
-const commentController = require('../controllers/commentController')
+const stateController = require('../controllers/stateController')
+const spotController = require('../controllers/spotController')
 
-router.get('/', linkController.index)
-router.post('/', linkController.create)
-router.get('/new', linkController.new)
+
+router.get("/", stateController.index)
+router.get("/:id", stateController.show)
+
+
+
+router.get('/:id/spots', linkController.index)
+router.post('/:id/spots', linkController.create)
+router.get('/:id/spots/new', linkController.new)
 router.get('/:id', linkController.show)
 router.get('/:id/edit', linkController.edit)
 router.patch('/:id', linkController.update)
