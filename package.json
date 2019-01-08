@@ -1,0 +1,27 @@
+{
+  "name": "unit2_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbwatson93/unit2_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbwatson93/unit2_project/issues"
+  },
+  "homepage": "https://github.com/jbwatson93/unit2_project#readme"
+}
