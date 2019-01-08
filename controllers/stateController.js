@@ -13,3 +13,4 @@ const stateController = {
         })
 }
 }
+module.exports = stateController
