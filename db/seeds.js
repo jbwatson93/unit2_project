@@ -2,7 +2,7 @@ const State = require('../models/State')
 const Spot = require('../models/Spot')
 const Media = require('../models/Media')
 const Comment = require('../models/Comment')
-const mongoose = require('./connections')
+const mongoose = require('../db/connection')
 
 const newComment1 = new Comment({
         author: "Young Sk8r",
@@ -52,11 +52,15 @@ const newState1 = new State({
     spots: [newSpot1,newSpot2]
 })
 
-State.remove({})
-    .then(()=> Spot.remove({}))
-    .then(()=>Media.remove({}))
-    .then(())
-
+State.deleteMany({})
+    .then(() => Spot.deleteMany({}))
+    .then(() =>Media.deleteMany({}))
+    .then(() =>Comment.deleteMany({}))
+    .then(() => Comment.insertMany([newComment1,newComment2,newComment3]))
+    .then(() => Media.insertMany([newMedia1,newMedia2]))
+    .then(() =>Spot.insertMany([newSpot1,newSpot2]))
+    .then(()=>  State.save())
+    .then(() => console.log("DB SEEDED, Lets Go!!!!"))
 
 // State.deleteMany({})
 //     .then(()=>{
