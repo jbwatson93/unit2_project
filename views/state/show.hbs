@@ -1,0 +1,23 @@
+
+
+{{#each state.spots}}
+
+  <div class="row ">
+    <div class="col s12 m6">
+      <div class="card teal accent-4 ">
+        <div class="card-content white-text">
+          <span class="card-title ">{{name}}</span>
+          <p> {{description}} </p>
+        </div>
+        <div class="card-action">
+          <a href="/{{../stateId}}/{{_id}}">More Info</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{{/each}}
+
+<a href="/{{stateId}}/spots/new" class="waves-effect waves-light btn left">Add Skate Spot</a>

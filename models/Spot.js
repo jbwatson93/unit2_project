@@ -8,7 +8,7 @@ const Spot = new Schema({
     egm: String,
     comments: [{
         type: Schema.Types.ObjectId,
-        ref: 'Comments'
+        ref: 'Comment'
     }],
     media: [{
         type: Schema.Types.ObjectId,

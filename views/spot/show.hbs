@@ -1,0 +1,28 @@
+<div class="center">
+     <h1 >{{spot.name}}</h1>
+     <h3> {{spot.location}} </h3>
+     <p>  {{spot.description}} </p>
+        <h3> Media</h3>
+        {{#each media}}
+           <img src={{url}} alt="">
+        {{/each}}
+        <br>
+        <a href="" class="waves-effect waves-light btn">Add Photo</a>
+        <h3>Comments</h3>
+    {{#each comments}}
+        <h4>
+            {{author}}
+        </h4>
+        <p> {{content}} </p>
+         <form action="/{{stateId}}/{{spotId}}/comments?_method=DELETE" method="POST">
+        <button class="btn right" type="submit">Delete</button>
+    </form>
+    {{/each}}
+     <a href="/{{stateId}}/{{spotId}}/comment/new" class="waves-effect waves-light btn">Add Comment</a>
+
+</div>
+<a href="/{{stateId}}/{{spotId}}/edit" class="waves-effect waves-light btn left">Edit Post</a>
+  <form action="/{{stateId}}/{{spotId}}?_method=DELETE" method="POST">
+        <button class="btn right" type="submit">Delete</button>
+    </form>
+

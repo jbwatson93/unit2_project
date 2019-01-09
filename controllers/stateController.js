@@ -1,4 +1,6 @@
 State = require("../models/State")
+Spot = require('../models/Spot')
+
 
 const stateController = {
     index: (req,res) => {
@@ -8,8 +10,9 @@ const stateController = {
     },
     show: (req, res) => {
         const stateId = req.params.id
-        State.findById(stateId).then((state) => {
-          res.render('state/show', {state})
+        State.findById(stateId).populate('spots').then((state) => {
+            const spotId= req.params.id
+         res.render('state/show',{state, stateId, spotId })
         })
 }
 }

@@ -55,11 +55,11 @@ const newState1 = new State({
 State.deleteMany({})
     .then(() => Spot.deleteMany({}))
     .then(() =>Media.deleteMany({}))
-    .then(() =>Comment.deleteMany({}))
+    .then(() => Comment.deleteMany({}))
     .then(() => Comment.insertMany([newComment1,newComment2,newComment3]))
     .then(() => Media.insertMany([newMedia1,newMedia2]))
     .then(() =>Spot.insertMany([newSpot1,newSpot2]))
-    .then(()=>  State.save())
+    .then(()=>  newState1.save())
     .then(() => console.log("DB SEEDED, Lets Go!!!!"))
 
 // State.deleteMany({})
