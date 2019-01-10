@@ -7,17 +7,23 @@
            <img src={{url}} alt="">
         {{/each}}
         <br>
-        <a href="" class="waves-effect waves-light btn">Add Photo</a>
+        <a href="//{{stateId}}/{{spotId}}/media/new" class="waves-effect waves-light btn">Add Photo</a>
         <h3>Comments</h3>
+
+        <div style="display: flex; align-items: center;
+    justify-content: center; flex-wrap: wrap;">
     {{#each comments}}
+    <div style="border: 1px solid black; margin: 20px; width: 60vw" class="center">
         <h4>
             {{author}}
         </h4>
         <p> {{content}} </p>
-         <form action="/{{stateId}}/{{spotId}}/comments?_method=DELETE" method="POST">
-        <button class="btn right" type="submit">Delete</button>
+         <form action="/{{../stateId}}/{{../spotId}}/{{_id}}?_method=DELETE" method="POST">
+        <button class="btn center" type="submit">Delete</button>
     </form>
+    </div>
     {{/each}}
+    </div>
      <a href="/{{stateId}}/{{spotId}}/comment/new" class="waves-effect waves-light btn">Add Comment</a>
 
 </div>

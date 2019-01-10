@@ -4,34 +4,34 @@ const Comment = require('../models/Comment')
 const State = require('../models/State')
 
 const commentController = {
-    
-    new: (req,res) => {
+
+    new: (req, res) => {
         const stateId = req.params.id
-        const spotId = req.params.spotId 
-        res.render('comment/new', {stateId: stateId, spotId: spotId})
+        const spotId = req.params.spotId
+        res.render('comment/new', { stateId: stateId, spotId: spotId })
     },
-    create: (req,res) => {
+    create: (req, res) => {
         const stateId = req.params.id
-        const spotId = req.params.spotId 
+        const spotId = req.params.spotId
         Spot.findById(spotId)
-        .then((spot)=>{
-            Comment.create(req.body)
-            .then((comment)=>{
-                spot.comments.push(comment)
-                spot.save()
-                res.redirect(`/${stateId}/${spotId}`)
+            .then((spot) => {
+                Comment.create(req.body)
+                    .then((comment) => {
+                        spot.comments.push(comment)
+                        spot.save()
+                        res.redirect(`/${stateId}/${spotId}`)
+                    })
             })
-        })
     },
-    delete: (req,res) => {
+    delete: (req, res) => {
         const stateId = req.params.id
-        const spotId = req.params.spotId 
-        Comment.find({}).then((commentId) => {
-        console.log(commentId)
-        Comment.findByIdAndDelete(commentId) 
-    }).then(() =>{
-        res.redirect(`/${stateId}/${spotId}`)
-    })
+        const spotId = req.params.spotId
+        const commentId = req.params.commentId
+            console.log(commentId)
+        Comment.findByIdAndDelete(commentId)
+        .then(() => {
+            res.redirect(`/${stateId}/${spotId}`)
+        })
     }
 
 }

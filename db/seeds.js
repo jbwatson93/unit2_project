@@ -62,37 +62,3 @@ State.deleteMany({})
     .then(()=>  newState1.save())
     .then(() => console.log("DB SEEDED, Lets Go!!!!"))
 
-// State.deleteMany({})
-//     .then(()=>{
-//         return State.create({
-//             name: "Georgia",
-//             spots: []
-//         }).then((state)=>{
-//             const newSpot = Spot.create({
-//                 name: "Brook Run",
-//                 location: "4770 N Peachtree Rd, Dunwoody, GA 30338",
-//                 description: 'Fun park with big transitions and two awesome bowls',
-//                 egm: `<div class="mapouter"><div class="gmap_canvas"><iframe width="380" height="380" id="gmap_canvas" src="https://maps.google.com/maps?q=%204770%20N%20Peachtree%20Rd%2C%20Dunwoody%2C%20GA%2030338&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net">website skins templates</a></div><style>.mapouter{text-align:right;height:380px;width:380px;}.gmap_canvas {overflow:hidden;background:none!important;height:380px;width:380px;}</style></div>`,
-//                 comments: [],
-//                 media: []
-//             }).then((spot)=>{
-//                 state.spots.push(spot)
-//             })
-//             const newSpot2 = Spot.create({
-//                 name: "4th Ward",
-//                 location: "830 Willoughby Way NE, Atlanta, GA 30312",
-//                 description: 'Skatepark in the middle of Atlanata',
-//                 egm: `<div class="mapouter"><div class="gmap_canvas"><iframe width="380" height="380" id="gmap_canvas" src="https://maps.google.com/maps?q=%20830%20Willoughby%20Way%20NE%2C%20Atlanta%2C%20GA%2030312&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net">website skins templates</a></div><style>.mapouter{text-align:right;height:380px;width:380px;}.gmap_canvas {overflow:hidden;background:none!important;height:380px;width:380px;}</style></div>`,
-//                 comments: [],
-//                 media: []
-//             }).then((spot)=>{
-//                 state.spots.push(spot)
-//             })
-//             .then((spot)=>{
-//                 const newComment =
-//             })
-//         })
-
-//     })
-
-

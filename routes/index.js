@@ -22,12 +22,6 @@ router.delete('/:id/:spotId', spotController.delete)
 
 router.post('/:id/:spotId/comment', commentController.create)
 router.get('/:id/:spotId/comment/new', commentController.new )
-// router.get('/:id/comments', commentController.index)
-// router.get('/:id/comments/new', commentController.new)
-// router.post('/:id/comments', commentController.create)
-// router.get('/:id/comments/:commentId', commentController.show)
-// router.get('/:id/comments/:commentId/edit', commentController.edit)
-// router.patch('/:id/comments/:commentId', commentController.update)
-router.delete('/:id/:spotId/comments/', commentController.delete)
+router.delete('/:id/:spotId/:commentId', commentController.delete)
 
 module.exports = router 
