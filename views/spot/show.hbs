@@ -5,9 +5,12 @@
         <h3> Media</h3>
         {{#each media}}
            <img src={{url}} alt="">
+            <form action="/{{../stateId}}/{{../spotId}}/media/{{_id}}?_method=DELETE" method="POST">
+        <button class="btn center" type="submit">Delete</button>
+    </form>
         {{/each}}
         <br>
-        <a href="//{{stateId}}/{{spotId}}/media/new" class="waves-effect waves-light btn">Add Photo</a>
+        <a href="/{{stateId}}/{{spotId}}/media/new" class="waves-effect waves-light btn">Add Photo</a>
         <h3>Comments</h3>
 
         <div style="display: flex; align-items: center;

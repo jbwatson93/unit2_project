@@ -24,4 +24,9 @@ router.post('/:id/:spotId/comment', commentController.create)
 router.get('/:id/:spotId/comment/new', commentController.new )
 router.delete('/:id/:spotId/:commentId', commentController.delete)
 
+router.post('/:id/:spotId/media', mediaController.create)
+router.get('/:id/:spotId/media/new', mediaController.new )
+router.delete('/:id/:spotId/media/:mediaId', mediaController.delete)
+
+
 module.exports = router 

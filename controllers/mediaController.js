@@ -15,9 +15,9 @@ const mediaController = {
         const spotId = req.params.spotId
         Spot.findById(spotId)
             .then((spot) => {
-                media.create(req.body)
+                Media.create(req.body)
                     .then((media) => {
-                        spot.medias.push(media)
+                        spot.media.push(media)
                         spot.save()
                         res.redirect(`/${stateId}/${spotId}`)
                     })
@@ -28,7 +28,7 @@ const mediaController = {
         const spotId = req.params.spotId
         const mediaId = req.params.mediaId
             console.log(mediaId)
-        media.findByIdAndDelete(mediaId)
+        Media.findByIdAndRemove(mediaId)
         .then(() => {
             res.redirect(`/${stateId}/${spotId}`)
         })
