@@ -18,3 +18,10 @@ This project is a Skate Spot finder where you can select by State and see differ
 
 ## Lessons Learned
 This project was a big learning experience. I learned how to use routes to send information from the database to the controller and then send that information to the views. The hardest part was having various nested models in the database and understanding at what level of the models I was sending to the views and how to access different key value pairs.
+
+# WireFrame
+
+![wireframe](/images/wireframe.PNG)
+
+# ERD
+![ERD](/images/erd.PNG)
