@@ -1,7 +1,10 @@
 # Unit 2 Project Skate Spot Finder
 
-[Go to Page](https://stark-refuge-41423.herokuapp.com/)
-[Trello](https://trello.com/b/eZZm5zYG/skatespot-finder)
+* [Go to Page](https://stark-refuge-41423.herokuapp.com/)
+
+
+
+* [Trello](https://trello.com/b/eZZm5zYG/skatespot-finder)
 
 
 ## Summary
