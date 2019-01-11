@@ -20,7 +20,7 @@ This project is a Skate Spot finder where you can select by State and see differ
 * Materialize
 
 ## Lessons Learned
-This project was a big learning experience. I learned how to use routes to send information from the database to the controller and then send that information to the views. The hardest part was having various nested models in the database and understanding at what level of the models I was sending to the views and how to access different key value pairs.
+This project was a big learning experience. I learned how to use routes to send information from the database to the controller and then send that information to the views. The hardest part was having various nested models in the database and understanding at what level of the models I was sending to the views and how to access different key value pairs. I also Learned how import
 
 # WireFrame
 
@@ -28,3 +28,6 @@ This project was a big learning experience. I learned how to use routes to send 
 
 # ERD
 ![ERD](/images/erd.PNG)
+
+# Version 2
+My version two would have a map of the US that the skatespots would populate so you could click a skatespot from that page and see what spots are around. I would also use an app so you can check into spots so you could see if other skaters are at the spots.
